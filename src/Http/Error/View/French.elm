@@ -63,7 +63,7 @@ responseToFrench response =
 
 
     view (BadPayload (("no such field name")) { url = "http://blob.com", status = { code = 505, message = "oops"}})
-        --> Html.text "L'erreur suivante s'est produite:  no such field name"
+        --> Html.text "L'erreur suivante s'est produite :  no such field name"
         --> " et La tentative de connexion à http://blob.com"
         --> " a renvoyé le code d'erreur suivant : 505"
         --> " qui correspond à : \"oops\""
