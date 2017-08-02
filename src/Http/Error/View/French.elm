@@ -45,27 +45,27 @@ responseToFrench response =
         ++ "\"."
 
 
-{-| Transform un Http.Error en une vue Html
+{-| Transforme un Http.Error en une vue Html
 
     view (BadUrl "blob")
         --> Html.text "L'URL fournie n'est pas valide : blob"
 
     view Timeout
-        --> Html.text "Le serveur n'as pas répondu à temps (la requête a expirée)."
+        --> Html.text "Le serveur n'a pas répondu à temps (la requête a expirée)."
 
     view NetworkError
-        --> "Impossible d'établir une connexion. Votre réseau fonctionne-t-il?"
+        --> "Impossible d'établir une connexion. Votre réseau fonctionne-t-il ?"
 
     view (BadStatus { url = "http://blob.com", status = { code = 500, message = "oops"}})
         --> Html.text "La tentative de connexion à http://blob.com"
-        --> " à renvoyer le code d'erreur suivant : 500"
+        --> " a renvoyé le code d'erreur suivant : 500"
         --> " qui correspond à : \"oops\""
 
 
     view (BadPayload (("no such field name")) { url = "http://blob.com", status = { code = 505, message = "oops"}})
         --> Html.text "L'erreur suivante s'est produite:  no such field name"
         --> " et La tentative de connexion à http://blob.com"
-        --> " à renvoyer le code d'erreur suivant : 505"
+        --> " a renvoyé le code d'erreur suivant : 505"
         --> " qui correspond à : \"oops\""
 
 -}
