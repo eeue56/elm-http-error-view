@@ -19,7 +19,7 @@ errorToFrench error =
             "L'URL fournie n'est pas valide : " ++ url ++ "."
 
         Timeout ->
-            "Le serveur n'as pas répondu à temps (la requête a expirée)."
+            "Le serveur n'a pas répondu à temps (la requête a expirée)."
 
         NetworkError ->
             "Impossible d'établir une connexion. Votre réseau fonctionne-t-il ?"
@@ -38,7 +38,7 @@ responseToFrench : Http.Response String -> String
 responseToFrench response =
     "La tentative de connexion à "
         ++ response.url
-        ++ " a renvoyée le code d'erreur suivant : "
+        ++ " a renvoyé le code d'erreur suivant : "
         ++ toString response.status.code
         ++ " qui correspond à : \""
         ++ response.status.message
