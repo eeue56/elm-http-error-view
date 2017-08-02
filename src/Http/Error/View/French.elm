@@ -22,7 +22,7 @@ errorToFrench error =
             "Le serveur n'as pas répondu à temps (la requête a expirée)."
 
         NetworkError ->
-            "Impossible d'établir une connexion. Votre réseau fonctionne-t-il?"
+            "Impossible d'établir une connexion. Votre réseau fonctionne-t-il ?"
 
         BadStatus response ->
             responseToFrench response
@@ -38,7 +38,7 @@ responseToFrench : Http.Response String -> String
 responseToFrench response =
     "La tentative de connexion à "
         ++ response.url
-        ++ " à renvoyer le code d'erreur suivant : "
+        ++ " a renvoyée le code d'erreur suivant : "
         ++ toString response.status.code
         ++ " qui correspond à : \""
         ++ response.status.message
