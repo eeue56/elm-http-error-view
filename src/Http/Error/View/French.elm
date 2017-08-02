@@ -19,7 +19,7 @@ errorToFrench error =
             "L'URL fournie n'est pas valide : " ++ url ++ "."
 
         Timeout ->
-            "Le serveur n'a pas répondu à temps (la requête a expirée)."
+            "Le serveur n'a pas répondu à temps (la requête a expiré)."
 
         NetworkError ->
             "Impossible d'établir une connexion. Votre réseau fonctionne-t-il ?"
@@ -51,7 +51,7 @@ responseToFrench response =
         --> Html.text "L'URL fournie n'est pas valide : blob"
 
     view Timeout
-        --> Html.text "Le serveur n'a pas répondu à temps (la requête a expirée)."
+        --> Html.text "Le serveur n'a pas répondu à temps (la requête a expiré)."
 
     view NetworkError
         --> "Impossible d'établir une connexion. Votre réseau fonctionne-t-il ?"
