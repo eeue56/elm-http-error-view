@@ -5,7 +5,7 @@ Display human readable error messages for when a HTTP request fails.
 ## Install
 
 ```
-elm-package install --yes eeue56/elm-html-error-view
+elm-package install --yes eeue56/elm-http-error-view
 ```
 
 ## Language support
